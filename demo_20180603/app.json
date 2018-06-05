@@ -1,0 +1,100 @@
+{
+  "pages注释":"必填。数组类型，每一项都是字符串，来指定小程序由哪些页面组成。每一项代表对应页面的【路径+文件名】信息，数组的第一项代表小程序的初始页面。小程序中新增/减少页面，都需要对 pages 数组进行修改。",
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+
+  "window注释":"选填。对象类型。用于设置小程序的状态栏、导航条、标题、窗口背景色。",
+  "window": {
+    "backgroundTextStyle注释":"下拉 loading 的样式，仅支持 dark/light，默认值dark",
+    "backgroundTextStyle": "light",
+
+    "navigationBarBackgroundColor注释":"导航栏背景颜色，如#000000，默认值#000000",
+    "navigationBarBackgroundColor": "#000000",
+
+    "navigationBarTitleText注释":"导航栏标题文字内容",
+    "navigationBarTitleText": "Shr",
+
+    "navigationBarTextStyle注释": "导航栏标题颜色，仅支持 black/white，默认值white",
+    "navigationBarTextStyle": "white",
+
+    "navigationStyle注释": "导航栏样式，仅支持 default/custom。custom ",
+    "navigationStyle": "default",
+
+    "backgroundColor注释": "窗口的背景色，默认值#ffffff",
+    "backgroundColor": "#eeeeee",
+
+    "enablePullDownRefresh注释": "是否开启下拉刷新，默认值false",
+    "enablePullDownRefresh": false,
+
+    "onReachBottomDistance注释": "页面上拉触底事件触发时距页面底部距离，单位为px，默认值50",
+    "onReachBottomDistance": "100",
+
+    "backgroundColorTop注释":"顶部窗口的背景色，仅 iOS 支持",
+    "backgroundColorTop":"#ffffff",
+
+    "backgroundColorBottom注释":"底部窗口的背景色，仅 iOS 支持",
+    "backgroundColorBottom":"#ffffff"
+  },
+
+  "tabBar注释": "选填。对象类型。如果小程序是一个多 tab 应用（客户端窗口的底部或顶部有 tab 栏可以切换页面），可以通过 tabBar 配置项指定 tab 栏的表现，以及 tab 切换时显示的对应页面。可以理解成页面底部的导航",
+  "tabBar": {
+    "color注释": "必填。tab 上的文字默认颜色",
+    "color": "#000000",
+
+    "selectedColor注释": "必填。tab 上的文字选中时的颜色",
+    "selectedColor":"#FF0000",
+
+    "backgroundColor注释": "必填。tab 的背景色",
+    "backgroundColor": "#B0B0B0",
+
+    "borderStyle注释": "选填。tabbar上边框的颜色， 仅支持 black/white，默认black",
+    "borderStyle": "white",
+
+    "list注释": "必填。list接受一个数组，数组中的每个项都是一个对象",
+    "list": [
+      {
+        "pagePath注释": "必填。页面路径，必须在 pages 中先定义",
+        "pagePath": "pages/index/index",
+
+        "text注释": "必填。tab 上按钮文字",
+        "text": "首页",
+
+        "iconPath注释": "选填。图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片",
+        "iconPath": "utils/TIM截图20180605012119.png",
+
+        "selectedIconPath注释": "选填。选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px ，当 postion 为 top 时，此参数无效",
+        "selectedIconPath": "utils/TIM截图20180605012210.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "utils/TIM截图20180605012119.png",
+        "selectedIconPath": "utils/TIM截图20180605012210.png"
+      }
+    ],
+
+    "position注释": "选填。可选值 bottom、top，默认bottom，为 top 时，将不会显示 icon",
+    "position": "top"
+  },
+
+  "networkTimeout注释": "选填。对象类型。可以设置各种网络请求的超时时间。",
+  "networkTimeout": {
+
+    "request注释": "选填。wx.request的超时时间，单位毫秒，默认为：60000",
+    "request": 20000,
+
+    "connectSocket注释": "选填。wx.connectSocket的超时时间，单位毫秒，默认为：60000",
+    "connectSocket": 20000,
+
+    "uploadFile注释": "选填。wx.uploadFile的超时时间，单位毫秒，默认为：60000",
+    "uploadFile": 20000,
+
+    "downloadFile注释": "选填。wx.downloadFile的超时时间，单位毫秒，默认为：60000",
+    "downloadFile": 20000
+  },
+
+  "debug注释": "选填。Boolean类型。可以在开发者工具中开启 debug 模式，在开发者工具的控制台面板，调试信息以 info 的形式给出，其信息有Page的注册，页面路由，数据更新，事件触发 。 可以帮助开发者快速定位一些常见的问题。",
+  "debug": true
+}
