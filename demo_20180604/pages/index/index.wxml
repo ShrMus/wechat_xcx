@@ -1,0 +1,146 @@
+<!--index.wxml-->
+<view>
+
+<!-- index.wxml 
+<view class="section">
+  <view class="section__title">flex-direction: row</view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
+
+<view class="section">
+  <view class="section__title">flex-direction: column</view>
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
+-->
+<!-- index.wxml 
+<view class="section">
+  <view class="section__title">vertical scroll 竖向滚动</view>
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+</view>
+
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll 横向滚动</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width:200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}">
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red"  class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>
+-->
+<!-- idnex.wxml 
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">指示点</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeProperty" data-property-name="indicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">自动播放</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeProperty" data-property-name="autoplay" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">衔接滑动</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{circular}}" bindchange="changeProperty" data-property-name="circular" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">竖向</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{vertical}}" bindchange="changeProperty" data-property-name="vertical" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider value="{{duration}}" min="500" max="2000" bindchange="changeProperty" data-property-name="duration" />
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider value="{{interval}}" min="2000" max="10000" bindchange="changeProperty" data-property-name="interval" />
+      <view class="page-section-title">
+        <text>前边距(px)</text>
+        <text class="info">{{previousMargin}}</text>
+      </view>
+      <slider value="{{previousMargin}}" min="0" max="50" bindchange="changeProperty" data-property-name="previousMargin" />
+      <view class="page-section-title">
+        <text>后边距(px)</text>
+        <text class="info">{{nextMargin}}</text>
+      </view>
+      <slider value="{{nextMargin}}" min="0" max="50" bindchange="changeProperty" data-property-name="nextMargin" />
+    </view>
+  </view>
+</view>
+-->
+
+<!-- index.html 
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="40"/>
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="40" color="{{item}}"/>
+  </block>
+</view>
+-->
+<!-- index.wxml 
+<view class="btn-area">
+  <view class="body-view">
+    <text>{{text}}</text>
+    <text>{{text}}</text>
+  </view>
+</view>
+-->
+<!-- index.wxml -->
+<progress percent="20" show-info />
+<progress percent="40" stroke-width="12" />
+<progress percent="60" color="pink" />
+<progress percent="80" active />
+
+</view>
