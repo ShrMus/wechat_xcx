@@ -1,0 +1,4 @@
+/* pages/index/register.wxss */
+input {
+  border: 1px solid;
+}

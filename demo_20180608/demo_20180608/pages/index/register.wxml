@@ -1,0 +1,22 @@
+<!-- register.wxml -->
+<view class="container">
+  <view>注册页面</view>
+  <form bindsubmit='formSubmit' bindreset="formReset">
+    <view>
+      用户名
+    </view>
+    <view>
+      <input type="text" name="userUsername" />
+    </view>
+    <view>
+      密码
+    </view>
+    <view>
+      <input type="password" name="userPassword" />
+    </view>
+    <view>
+      <button form-type="submit">注册</button>
+      <button bindtap="toBack">返回</button>
+    </view>
+  </form>
+</view>
